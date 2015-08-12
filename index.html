@@ -8,13 +8,13 @@
 	<div id="idunno">
 		<span id="lol">¯\_(ツ)_/¯</span>
 		<div id="info">
-			click to copy
-			<br />
+			<span id="copyinfo">click to copy</span>
 			<a href = "https://github.com/ashandore/idunnolol"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="25" height="25"/></a>
 		</div>
 	</div>
 
 	<script type="text/javascript">
+
 		function selectlol(element) {
 			var range, selection;
 
@@ -53,11 +53,24 @@
 		}
 
 		var idunno = document.getElementById('lol');
-		idunno.onclick = function(event) {
-			if(!clipboardlol(idunno.innerHTML)) {
-				selectlol(idunno);
-			}			
-		};
+		var copyAvailable = document.queryCommandSupported('copy');
+		if(!copyAvailable) {
+			var el = document.getElementById("copyinfo");
+			el.parentNode.removeChild(el);
+
+			idunno.onclick = function(event) {
+				selectlol(idunno);			
+			};
+		} else {
+			idunno.onclick = function(event) {
+				if(!clipboardlol(idunno.innerHTML)) {
+					selectlol(idunno);
+				}			
+			};
+		}
+
+		
+		
 	</script>
 </body>
 

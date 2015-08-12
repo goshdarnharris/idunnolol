@@ -10,6 +10,15 @@ html, body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    font-size:10rem;	
-    font-family:arial,sans-serif;
+    font-size: 10rem;	
+    font-family: arial,sans-serif;
+}
+
+#info {
+    position: fixed;
+    bottom: 10%;
+    font-size: .75rem;
+    font-family: arial,sans-serif;
+    text-align: center;
+    width: 100%;
 }

@@ -1,0 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#idunno {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size:10rem;	
+    font-family:arial,sans-serif;
+}

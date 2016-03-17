@@ -13,6 +13,9 @@ html, body {
     font-size: 10rem;	
     font-family: arial,sans-serif;
 }
+#lol {
+    cursor:copy;
+}
 
 #info {
     position: fixed;
@@ -21,4 +24,5 @@ html, body {
     font-family: arial,sans-serif;
     text-align: center;
     width: 100%;
+    cursor:initial;
 }
